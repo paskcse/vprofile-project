@@ -56,6 +56,7 @@ rm -rf /usr/local/tomcat/webapps/ROOT*
 cp target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
 systemctl start tomcat
 systemctl start firewalld
+systemctl enable firewalld
 firewall-cmd --add-port=8080/tcp --permanent
 firewall-cmd --reload
 #cp /vagrant/application.properties /usr/local/tomcat/webapps/ROOT/WEB-INF/classes/application.properties
